@@ -35,7 +35,7 @@ def get_sample_data(table_name, limit=5):
 
 #Get Table Meta Data
 def get_table_metadata(table_name):
-    print(table_name)
+    
     return {
         "table_name": table_name,
         "columns": [

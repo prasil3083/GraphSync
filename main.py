@@ -1,18 +1,81 @@
-import source_database_layer.validator as validator
-from source_database_layer import connection
-import source_database_layer.importer as importer
+import source_database_layer as sdl
+import schema_layer.metadata_extractor as metadata_extractor
+import llm_layer
+
 
 my_path = "C:/Programming/Neo4J/GraphSync/Data Sets/office"
 
-#Extract list of valid files
-valid_files = validator.file_extractor(my_path)
 
-#build a connection
-connection_engine = connection.create_db_connection()
+def make_import():
+    # Extract list of valid files
+    valid_files = sdl.validator.file_extractor(my_path)
 
-#make an import in postgres 
-database_import = importer.import_to_postgres(valid_files,my_path,connection_engine) 
+    # build a connection
+    connection_engine = sdl.connection.create_db_connection()
 
-#
+    # make an import in postgres
+    database_import = sdl.importer.import_to_postgres(
+        valid_files, my_path, connection_engine
+    )
+    return database_import
+
+def get_metadata():
+    metadata =  metadata_extractor.extract_full_metadata()
+    return metadata
+
+# ================================================
+# Testing Phase
+# ================================================
+
+def get_insite():
+    meta_data = get_metadata()
+    prompt = llm_layer.llm_prompt_builder.build_relationship_prompt(metadata=meta_data)
+    insite = llm_layer.llm_client.call_llm(prompt=prompt)
+    return insite
+
+print(get_insite())
+
+# ================================================
+# Testing Phase
+# ================================================
 
 
+#=================================================
+# OUTPUT
+#=================================================
+'''
+[
+    {
+        "from_table": "Employee",
+        "from_column": "EmpID",
+        "to_table": "Department",
+        "to_column": "DeptID",
+        "relationship": "many_to_one",
+        "confidence": 0.8
+    },
+    {
+        "from_table": "Order",
+        "from_column": "CustomerID",
+        "to_table": "Customer",
+        "to_column": "ID",
+        "relationship": "one_to_many",
+        "confidence": 0.9
+    },
+    {
+        "from_table": "ProductReview",
+        "from_column": "ProductID",
+        "to_table": "Product",
+        "to_column": "ID",
+        "relationship": "many_to_one",
+        "confidence": 0.85
+    },
+    {
+        "from_table": "Payment",
+        "from_column": "OrderID",
+        "to_table": "Order",
+        "to_column": "ID",
+        "relationship": "one_to_many",
+        "confidence": 0.95
+    }
+]
+'''
