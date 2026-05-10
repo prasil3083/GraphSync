@@ -31,7 +31,7 @@ def file_extractor (path : str) -> list:
                 if df.empty:
                     raise Exception("CSV is empty")
                 
-                fileToBeImported.append(file_name)
+                fileToBeImported.append(file_name.lower())
 
             #EXCEL VALIDATION
             elif extension in [".xlsx",".xls"]:

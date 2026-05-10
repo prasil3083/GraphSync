@@ -6,7 +6,7 @@ def import_to_postgres(files, path, engine):
     
     for fileName in files:
         full_path = os.path.join(path, fileName)
-        table_name = os.path.splitext(fileName)[0].upper()
+        table_name = os.path.splitext(fileName)[0].lower()
 
         if fileName.endswith(".csv"):
             df = pd.read_csv(full_path)
