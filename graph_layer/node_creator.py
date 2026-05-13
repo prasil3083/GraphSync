@@ -1,0 +1,37 @@
+from sqlalchemy import text
+from source_database_layer.connection import create_db_connection
+from graph_layer.neo4j_connection import get_driver
+
+sql_engine = create_db_connection()
+neo4j_driver = get_driver()
+
+
+def fetch_table_data(table_name):
+
+    query = text(f'SELECT * FROM "{table_name}"')
+
+    with sql_engine.connect() as conn:
+        result = conn.execute(query)
+
+        rows = result.fetchall()
+        columns = result.keys()
+
+    return [dict(zip(columns, row)) for row in rows]
+
+
+def create_nodes(table_name):
+
+    data = fetch_table_data(table_name)
+    label = table_name.capitalize()
+
+    with neo4j_driver.session() as session:
+
+        for row in data:
+
+            query = f"""
+            CREATE (n:{label} $properties)
+            """
+
+            session.run(query, properties=row)
+
+    print(f"Created nodes for {table_name}")

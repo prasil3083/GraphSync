@@ -1,6 +1,7 @@
 import source_database_layer as sdl
 import schema_layer.metadata_extractor as metadata_extractor
 import llm_layer
+import graph_layer as gl
 
 
 my_path = "C:/Programming/Neo4J/GraphSync/Data Sets/office"
@@ -33,12 +34,13 @@ def get_insite():
     insite = llm_layer.llm_client.call_llm(prompt=prompt)
     return insite
 
-print(get_insite())
+def transform_to_node(tablename : str):
+    return gl.node_creator.create_nodes(tablename)
 
 # ================================================
 # Testing Phase
 # ================================================
-
+print(transform_to_node("employee_data"))
 
 #=================================================
 # OUTPUT
