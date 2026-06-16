@@ -42,42 +42,4 @@ def transform_to_node(tablename : str):
 # ================================================
 print(transform_to_node("employee_data"))
 
-#=================================================
-# OUTPUT
-#=================================================
-'''
-[
-    {
-        "from_table": "Employee",
-        "from_column": "EmpID",
-        "to_table": "Department",
-        "to_column": "DeptID",
-        "relationship": "many_to_one",
-        "confidence": 0.8
-    },
-    {
-        "from_table": "Order",
-        "from_column": "CustomerID",
-        "to_table": "Customer",
-        "to_column": "ID",
-        "relationship": "one_to_many",
-        "confidence": 0.9
-    },
-    {
-        "from_table": "ProductReview",
-        "from_column": "ProductID",
-        "to_table": "Product",
-        "to_column": "ID",
-        "relationship": "many_to_one",
-        "confidence": 0.85
-    },
-    {
-        "from_table": "Payment",
-        "from_column": "OrderID",
-        "to_table": "Order",
-        "to_column": "ID",
-        "relationship": "one_to_many",
-        "confidence": 0.95
-    }
-]
-'''
+

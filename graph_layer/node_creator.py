@@ -19,7 +19,7 @@ def fetch_table_data(table_name):
     return [dict(zip(columns, row)) for row in rows]
 
 
-def create_nodes(table_name):
+def create_nodes(table_name, primary_key):
 
     data = fetch_table_data(table_name)
     label = table_name.capitalize()
@@ -29,9 +29,14 @@ def create_nodes(table_name):
         for row in data:
 
             query = f"""
-            CREATE (n:{label} $properties)
+            MERGE (n:{label} {{{primary_key}: $pk_value}})
+            SET n += $properties
             """
 
-            session.run(query, properties=row)
+            session.run(
+                query,
+                pk_value=row[primary_key],
+                properties=row
+            )
 
     print(f"Created nodes for {table_name}")
