@@ -19,6 +19,7 @@ def fetch_table_data(table_name):
     return [dict(zip(columns, row)) for row in rows]
 
 
+# Create Node from using the table name and keys
 def create_nodes(table_name, primary_key):
 
     data = fetch_table_data(table_name)
@@ -33,10 +34,6 @@ def create_nodes(table_name, primary_key):
             SET n += $properties
             """
 
-            session.run(
-                query,
-                pk_value=row[primary_key],
-                properties=row
-            )
+            session.run(query, pk_value=row[primary_key], properties=row)
 
     print(f"Created nodes for {table_name}")

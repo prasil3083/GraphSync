@@ -3,7 +3,6 @@ import schema_layer.metadata_extractor as metadata_extractor
 import llm_layer
 import graph_layer as gl
 
-
 my_path = "C:/Programming/Neo4J/GraphSync/Data Sets/office"
 
 
@@ -20,26 +19,33 @@ def make_import():
     )
     return database_import
 
+
+# fetch the metadata of the table with the column type and it's category
 def get_metadata():
-    metadata =  metadata_extractor.extract_full_metadata()
+    metadata = metadata_extractor.extract_full_metadata()
+
     return metadata
+
 
 # ================================================
 # Testing Phase
 # ================================================
+
 
 def get_insite():
     meta_data = get_metadata()
     prompt = llm_layer.llm_prompt_builder.build_relationship_prompt(metadata=meta_data)
     insite = llm_layer.llm_client.call_llm(prompt=prompt)
+    print(insite)
     return insite
 
-def transform_to_node(tablename : str):
-    return gl.node_creator.create_nodes(tablename)
+
+def transform_to_node(tablename: str, primaryKey: str):
+    insite = get_insite()
+    # return gl.node_creator.create_nodes(tablename,primaryKey)
+
 
 # ================================================
 # Testing Phase
 # ================================================
-print(transform_to_node("employee_data"))
-
-
+print(transform_to_node("employee_data", "emp_id"))

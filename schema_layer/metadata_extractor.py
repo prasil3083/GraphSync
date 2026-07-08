@@ -7,23 +7,28 @@ import json
 engine = connection.create_db_connection()
 inspector = inspect(engine)
 
-#get Tables
+
+# get Tables
 def get_tables():
     return inspector.get_table_names()
 
-#Get Tables
+
+# Get Tables
 def get_columns(table_name):
     return inspector.get_columns(table_name)
 
-#Get Primary Key
+
+# Get Primary Key
 def get_primary_key(table_name):
     return inspector.get_pk_constraint(table_name).get("constrained_columns")
 
-#Get Foreing Key
+
+# Get Foreing Key
 def get_foreign_keys(table_name):
     return inspector.get_foreign_keys(table_name)
 
-#Get Sample Data
+
+# Get Sample Data
 def get_sample_data(table_name, limit=5):
     query = text(f"SELECT * FROM {table_name} LIMIT {limit}")
     with engine.connect() as conn:
@@ -33,9 +38,10 @@ def get_sample_data(table_name, limit=5):
 
     return [dict(zip(columns, row)) for row in rows]
 
-#Get Table Meta Data
+
+# Get Table Meta Data
 def get_table_metadata(table_name):
-    
+
     return {
         "table_name": table_name,
         "columns": [
@@ -50,6 +56,7 @@ def get_table_metadata(table_name):
 
 def extract_full_metadata():
     tables = get_tables()
+    print(tables)
 
     return {"database_schema": [get_table_metadata(table) for table in tables]}
 
