@@ -1,0 +1,742 @@
+{
+    "database_schema": [
+        {
+            "table_name": "employee_data",
+            "columns": [
+                {
+                    "name": "emp_id",
+                    "type": "BIGINT",
+                    "nullable": false
+                },
+                {
+                    "name": "first_name",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "last_name",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "start_date",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "last_date",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "title",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "supervisor",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "ad_email",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "business_unit",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "employee_status",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "employee_type",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "pay_zone",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "employee_classificationType",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "termination_type",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "termination_description",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "department_type",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "division",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "dob",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "state",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "job_function_description",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "gender_code",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "location_code",
+                    "type": "BIGINT",
+                    "nullable": true
+                },
+                {
+                    "name": "race_desc",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "marital_desc",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "performance_score",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "current_employee Rating",
+                    "type": "BIGINT",
+                    "nullable": true
+                }
+            ],
+            "primary_key": [
+                "emp_id"
+            ],
+            "foreign_keys": [],
+            "sample_data": [
+                {
+                    "emp_id": 3427,
+                    "first_name": "Uriah",
+                    "last_name": "Bridges",
+                    "start_date": "20-Sep-19",
+                    "last_date": none,
+                    "title": "Production Technician I",
+                    "supervisor": "Peter Oneill",
+                    "ad_email": "uriah.bridges@bilearner.com",
+                    "business_unit": "CCDR",
+                    "employee_status": "Active",
+                    "employee_type": "Contract",
+                    "pay_zone": "Zone C",
+                    "employee_classificationType": "Temporary",
+                    "termination_type": "Unk",
+                    "termination_description": none,
+                    "department_type": "Production       ",
+                    "division": "Finance & Accounting",
+                    "dob": "07-10-1969",
+                    "state": "MA",
+                    "job_function_description": "Accounting",
+                    "gender_code": "Female",
+                    "location_code": 34904,
+                    "race_desc": "White",
+                    "marital_desc": "Widowed",
+                    "performance_score": "Fully Meets",
+                    "current_employee Rating": 4
+                },
+                {
+                    "emp_id": 3428,
+                    "first_name": "Paula",
+                    "last_name": "Small",
+                    "start_date": "11-Feb-23",
+                    "last_date": none,
+                    "title": "Production Technician I",
+                    "supervisor": "Renee Mccormick",
+                    "ad_email": "paula.small@bilearner.com",
+                    "business_unit": "EW",
+                    "employee_status": "Active",
+                    "employee_type": "Contract",
+                    "pay_zone": "Zone A",
+                    "employee_classificationType": "Part-Time",
+                    "termination_type": "Unk",
+                    "termination_description": none,
+                    "department_type": "Production       ",
+                    "division": "Aerial",
+                    "dob": "30-08-1965",
+                    "state": "MA",
+                    "job_function_description": "Labor",
+                    "gender_code": "Male",
+                    "location_code": 6593,
+                    "race_desc": "Hispanic",
+                    "marital_desc": "Widowed",
+                    "performance_score": "Fully Meets",
+                    "current_employee Rating": 3
+                },
+                {
+                    "emp_id": 3429,
+                    "first_name": "Edward",
+                    "last_name": "Buck",
+                    "start_date": "10-Dec-18",
+                    "last_date": none,
+                    "title": "Area Sales Manager",
+                    "supervisor": "Crystal Walker",
+                    "ad_email": "edward.buck@bilearner.com",
+                    "business_unit": "PL",
+                    "employee_status": "Active",
+                    "employee_type": "Full-Time",
+                    "pay_zone": "Zone B",
+                    "employee_classificationType": "Part-Time",
+                    "termination_type": "Unk",
+                    "termination_description": none,
+                    "department_type": "Sales",
+                    "division": "General - Sga",
+                    "dob": "06-10-1991",
+                    "state": "MA",
+                    "job_function_description": "Assistant",
+                    "gender_code": "Male",
+                    "location_code": 2330,
+                    "race_desc": "Hispanic",
+                    "marital_desc": "Widowed",
+                    "performance_score": "Fully Meets",
+                    "current_employee Rating": 4
+                },
+                {
+                    "emp_id": 3430,
+                    "first_name": "Michael",
+                    "last_name": "Riordan",
+                    "start_date": "21-Jun-21",
+                    "last_date": none,
+                    "title": "Area Sales Manager",
+                    "supervisor": "Rebekah Wright",
+                    "ad_email": "michael.riordan@bilearner.com",
+                    "business_unit": "CCDR",
+                    "employee_status": "Active",
+                    "employee_type": "Contract",
+                    "pay_zone": "Zone A",
+                    "employee_classificationType": "Full-Time",
+                    "termination_type": "Unk",
+                    "termination_description": none,
+                    "department_type": "Sales",
+                    "division": "Finance & Accounting",
+                    "dob": "04-04-1998",
+                    "state": "ND",
+                    "job_function_description": "Clerk",
+                    "gender_code": "Male",
+                    "location_code": 58782,
+                    "race_desc": "Other",
+                    "marital_desc": "Single",
+                    "performance_score": "Fully Meets",
+                    "current_employee Rating": 2
+                },
+                {
+                    "emp_id": 3431,
+                    "first_name": "Jasmine",
+                    "last_name": "Onque",
+                    "start_date": "29-Jun-19",
+                    "last_date": none,
+                    "title": "Area Sales Manager",
+                    "supervisor": "Jason Kim",
+                    "ad_email": "jasmine.onque@bilearner.com",
+                    "business_unit": "TNS",
+                    "employee_status": "Active",
+                    "employee_type": "Contract",
+                    "pay_zone": "Zone A",
+                    "employee_classificationType": "Temporary",
+                    "termination_type": "Unk",
+                    "termination_description": none,
+                    "department_type": "Sales",
+                    "division": "General - Con",
+                    "dob": "29-08-1969",
+                    "state": "FL",
+                    "job_function_description": "Laborer",
+                    "gender_code": "Female",
+                    "location_code": 33174,
+                    "race_desc": "Other",
+                    "marital_desc": "Married",
+                    "performance_score": "Fully Meets",
+                    "current_employee Rating": 3
+                }
+            ]
+        },
+        {
+            "table_name": "employee_engagement_survey_data",
+            "columns": [
+                {
+                    "name": "Employee ID",
+                    "type": "BIGINT",
+                    "nullable": true
+                },
+                {
+                    "name": "Survey Date",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Engagement Score",
+                    "type": "BIGINT",
+                    "nullable": true
+                },
+                {
+                    "name": "Satisfaction Score",
+                    "type": "BIGINT",
+                    "nullable": true
+                },
+                {
+                    "name": "Work-Life Balance Score",
+                    "type": "BIGINT",
+                    "nullable": true
+                }
+            ],
+            "primary_key": [],
+            "foreign_keys": [],
+            "sample_data": [
+                {
+                    "Employee ID": 1001,
+                    "Survey Date": "10-10-2022",
+                    "Engagement Score": 2,
+                    "Satisfaction Score": 5,
+                    "Work-Life Balance Score": 5
+                },
+                {
+                    "Employee ID": 1002,
+                    "Survey Date": "03-08-2023",
+                    "Engagement Score": 4,
+                    "Satisfaction Score": 5,
+                    "Work-Life Balance Score": 3
+                },
+                {
+                    "Employee ID": 1003,
+                    "Survey Date": "03-01-2023",
+                    "Engagement Score": 2,
+                    "Satisfaction Score": 5,
+                    "Work-Life Balance Score": 2
+                },
+                {
+                    "Employee ID": 1004,
+                    "Survey Date": "30-07-2023",
+                    "Engagement Score": 3,
+                    "Satisfaction Score": 5,
+                    "Work-Life Balance Score": 3
+                },
+                {
+                    "Employee ID": 1005,
+                    "Survey Date": "19-06-2023",
+                    "Engagement Score": 2,
+                    "Satisfaction Score": 4,
+                    "Work-Life Balance Score": 5
+                }
+            ]
+        },
+        {
+            "table_name": "recruitment_data",
+            "columns": [
+                {
+                    "name": "EmpID",
+                    "type": "BIGINT",
+                    "nullable": true
+                },
+                {
+                    "name": "FirstName",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "LastName",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "StartDate",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "ExitDate",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Title",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Supervisor",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "ADEmail",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "BusinessUnit",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "EmployeeStatus",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "EmployeeType",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "PayZone",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "EmployeeClassificationType",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "TerminationType",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "TerminationDescription",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "DepartmentType",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Division",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "DOB",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "State",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "JobFunctionDescription",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "GenderCode",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "LocationCode",
+                    "type": "BIGINT",
+                    "nullable": true
+                },
+                {
+                    "name": "RaceDesc",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "MaritalDesc",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Performance Score",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Current Employee Rating",
+                    "type": "BIGINT",
+                    "nullable": true
+                }
+            ],
+            "primary_key": [],
+            "foreign_keys": [],
+            "sample_data": [
+                {
+                    "EmpID": 3427,
+                    "FirstName": "Uriah",
+                    "LastName": "Bridges",
+                    "StartDate": "20-Sep-19",
+                    "ExitDate": none,
+                    "Title": "Production Technician I",
+                    "Supervisor": "Peter Oneill",
+                    "ADEmail": "uriah.bridges@bilearner.com",
+                    "BusinessUnit": "CCDR",
+                    "EmployeeStatus": "Active",
+                    "EmployeeType": "Contract",
+                    "PayZone": "Zone C",
+                    "EmployeeClassificationType": "Temporary",
+                    "TerminationType": "Unk",
+                    "TerminationDescription": none,
+                    "DepartmentType": "Production       ",
+                    "Division": "Finance & Accounting",
+                    "DOB": "07-10-1969",
+                    "State": "MA",
+                    "JobFunctionDescription": "Accounting",
+                    "GenderCode": "Female",
+                    "LocationCode": 34904,
+                    "RaceDesc": "White",
+                    "MaritalDesc": "Widowed",
+                    "Performance Score": "Fully Meets",
+                    "Current Employee Rating": 4
+                },
+                {
+                    "EmpID": 3428,
+                    "FirstName": "Paula",
+                    "LastName": "Small",
+                    "StartDate": "11-Feb-23",
+                    "ExitDate": none,
+                    "Title": "Production Technician I",
+                    "Supervisor": "Renee Mccormick",
+                    "ADEmail": "paula.small@bilearner.com",
+                    "BusinessUnit": "EW",
+                    "EmployeeStatus": "Active",
+                    "EmployeeType": "Contract",
+                    "PayZone": "Zone A",
+                    "EmployeeClassificationType": "Part-Time",
+                    "TerminationType": "Unk",
+                    "TerminationDescription": none,
+                    "DepartmentType": "Production       ",
+                    "Division": "Aerial",
+                    "DOB": "30-08-1965",
+                    "State": "MA",
+                    "JobFunctionDescription": "Labor",
+                    "GenderCode": "Male",
+                    "LocationCode": 6593,
+                    "RaceDesc": "Hispanic",
+                    "MaritalDesc": "Widowed",
+                    "Performance Score": "Fully Meets",
+                    "Current Employee Rating": 3
+                },
+                {
+                    "EmpID": 3429,
+                    "FirstName": "Edward",
+                    "LastName": "Buck",
+                    "StartDate": "10-Dec-18",
+                    "ExitDate":none,
+                    "Title": "Area Sales Manager",
+                    "Supervisor": "Crystal Walker",
+                    "ADEmail": "edward.buck@bilearner.com",
+                    "BusinessUnit": "PL",
+                    "EmployeeStatus": "Active",
+                    "EmployeeType": "Full-Time",
+                    "PayZone": "Zone B",
+                    "EmployeeClassificationType": "Part-Time",
+                    "TerminationType": "Unk",
+                    "TerminationDescription": none,
+                    "DepartmentType": "Sales",
+                    "Division": "General - Sga",
+                    "DOB": "06-10-1991",
+                    "State": "MA",
+                    "JobFunctionDescription": "Assistant",
+                    "GenderCode": "Male",
+                    "LocationCode": 2330,
+                    "RaceDesc": "Hispanic",
+                    "MaritalDesc": "Widowed",
+                    "Performance Score": "Fully Meets",
+                    "Current Employee Rating": 4
+                },
+                {
+                    "EmpID": 3430,
+                    "FirstName": "Michael",
+                    "LastName": "Riordan",
+                    "StartDate": "21-Jun-21",
+                    "ExitDate": none,
+                    "Title": "Area Sales Manager",
+                    "Supervisor": "Rebekah Wright",
+                    "ADEmail": "michael.riordan@bilearner.com",
+                    "BusinessUnit": "CCDR",
+                    "EmployeeStatus": "Active",
+                    "EmployeeType": "Contract",
+                    "PayZone": "Zone A",
+                    "EmployeeClassificationType": "Full-Time",
+                    "TerminationType": "Unk",
+                    "TerminationDescription": none,
+                    "DepartmentType": "Sales",
+                    "Division": "Finance & Accounting",
+                    "DOB": "04-04-1998",
+                    "State": "ND",
+                    "JobFunctionDescription": "Clerk",
+                    "GenderCode": "Male",
+                    "LocationCode": 58782,
+                    "RaceDesc": "Other",
+                    "MaritalDesc": "Single",
+                    "Performance Score": "Fully Meets",
+                    "Current Employee Rating": 2
+                },
+                {
+                    "EmpID": 3431,
+                    "FirstName": "Jasmine",
+                    "LastName": "Onque",
+                    "StartDate": "29-Jun-19",
+                    "ExitDate": none,
+                    "Title": "Area Sales Manager",
+                    "Supervisor": "Jason Kim",
+                    "ADEmail": "jasmine.onque@bilearner.com",
+                    "BusinessUnit": "TNS",
+                    "EmployeeStatus": "Active",
+                    "EmployeeType": "Contract",
+                    "PayZone": "Zone A",
+                    "EmployeeClassificationType": "Temporary",
+                    "TerminationType": "Unk",
+                    "TerminationDescription": none,
+                    "DepartmentType": "Sales",
+                    "Division": "General - Con",
+                    "DOB": "29-08-1969",
+                    "State": "FL",
+                    "JobFunctionDescription": "Laborer",
+                    "GenderCode": "Female",
+                    "LocationCode": 33174,
+                    "RaceDesc": "Other",
+                    "MaritalDesc": "Married",
+                    "Performance Score": "Fully Meets",
+                    "Current Employee Rating": 3
+                }
+            ]
+        },
+        {
+            "table_name": "training_and_development_data",
+            "columns": [
+                {
+                    "name": "Employee ID",
+                    "type": "BIGINT",
+                    "nullable": true
+                },
+                {
+                    "name": "Training Date",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Training Program Name",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Training Type",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Training Outcome",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Location",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Trainer",
+                    "type": "TEXT",
+                    "nullable": true
+                },
+                {
+                    "name": "Training Duration(Days)",
+                    "type": "BIGINT",
+                    "nullable": true
+                },
+                {
+                    "name": "Training Cost",
+                    "type": "DOUBLE PRECISION",
+                    "nullable": true
+                }
+            ],
+            "primary_key": [],
+            "foreign_keys": [],
+            "sample_data": [
+                {
+                    "Employee ID": 1001,
+                    "Training Date": "21-Sep-22",
+                    "Training Program Name": "Customer Service",
+                    "Training Type": "Internal",
+                    "Training Outcome": "Failed",
+                    "Location": "Port Greg",
+                    "Trainer": "Amanda Daniels",
+                    "Training Duration(Days)": 4,
+                    "Training Cost": 510.83
+                },
+                {
+                    "Employee ID": 1002,
+                    "Training Date": "19-Jul-23",
+                    "Training Program Name": "Leadership Development",
+                    "Training Type": "Internal",
+                    "Training Outcome": "Failed",
+                    "Location": "Brandonview",
+                    "Trainer": "Brittany Chambers",
+                    "Training Duration(Days)": 2,
+                    "Training Cost": 582.37
+                },
+                {
+                    "Employee ID": 1003,
+                    "Training Date": "24-Feb-23",
+                    "Training Program Name": "Technical Skills",
+                    "Training Type": "Internal",
+                    "Training Outcome": "Incomplete",
+                    "Location": "Port Briannahaven",
+                    "Trainer": "Mark Roberson",
+                    "Training Duration(Days)": 4,
+                    "Training Cost": 777.06
+                },
+                {
+                    "Employee ID": 1004,
+                    "Training Date": "12-Jan-23",
+                    "Training Program Name": "Customer Service",
+                    "Training Type": "Internal",
+                    "Training Outcome": "Completed",
+                    "Location": "Knightborough",
+                    "Trainer": "Richard Fisher",
+                    "Training Duration(Days)": 2,
+                    "Training Cost": 824.3
+                },
+                {
+                    "Employee ID": 1005,
+                    "Training Date": "12-May-23",
+                    "Training Program Name": "Communication Skills",
+                    "Training Type": "External",
+                    "Training Outcome": "Passed",
+                    "Location": "Bruceshire",
+                    "Trainer": "Heather Shaffer",
+                    "Training Duration(Days)": 4,
+                    "Training Cost": 145.99
+                }
+            ]
+        }
+    ]
+}

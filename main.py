@@ -23,7 +23,6 @@ def make_import():
 # fetch the metadata of the table with the column type and it's category
 def get_metadata():
     metadata = metadata_extractor.extract_full_metadata()
-
     return metadata
 
 
@@ -34,9 +33,9 @@ def get_metadata():
 
 def get_insite():
     meta_data = get_metadata()
+    print(meta_data)
     prompt = llm_layer.llm_prompt_builder.build_relationship_prompt(metadata=meta_data)
     insite = llm_layer.llm_client.call_llm(prompt=prompt)
-    print(insite)
     return insite
 
 
