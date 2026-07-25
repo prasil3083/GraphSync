@@ -50,14 +50,12 @@ def get_table_metadata(table_name):
         ],
         "primary_key": get_primary_key(table_name),
         "foreign_keys": get_foreign_keys(table_name),
-        "sample_data": get_sample_data(table_name),
+        #"sample_data": get_sample_data(table_name),   # no need for the dampole data for this test
     }
 
 
 def extract_full_metadata():
     tables = get_tables()
-    print(tables)
-
     return {"database_schema": [get_table_metadata(table) for table in tables]}
 
 

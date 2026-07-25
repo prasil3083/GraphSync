@@ -33,7 +33,6 @@ def get_metadata():
 
 def get_insite():
     meta_data = get_metadata()
-    print(meta_data)
     prompt = llm_layer.llm_prompt_builder.build_relationship_prompt(metadata=meta_data)
     insite = llm_layer.llm_client.call_llm(prompt=prompt)
     return insite
@@ -41,7 +40,7 @@ def get_insite():
 
 def transform_to_node(tablename: str, primaryKey: str):
     insite = get_insite()
-    # return gl.node_creator.create_nodes(tablename,primaryKey)
+    return gl.node_creator.create_nodes(tablename,primaryKey)
 
 
 # ================================================
