@@ -6,6 +6,7 @@ import graph_layer as gl
 my_path = "C:/Programming/Neo4J/GraphSync/Data Sets/office"
 
 
+# to make the import form the csv file to the data tables
 def make_import():
     # Extract list of valid files
     valid_files = sdl.validator.file_extractor(my_path)
@@ -40,10 +41,21 @@ def get_insite():
 
 def transform_to_node(tablename: str, primaryKey: str):
     insite = get_insite()
-    return gl.node_creator.create_nodes(tablename,primaryKey)
+    print(insite)
+    # return gl.node_creator.create_nodes(tablename,primaryKey)
 
 
 # ================================================
 # Testing Phase
 # ================================================
-print(transform_to_node("employee_data", "emp_id"))
+def main():
+    tables = metadata_extractor.get_tables()
+    for tablename in tables:
+        primaryKey = metadata_extractor.get_primary_key(tablename)
+        # Create the Node form the Table name and the primary key
+        gl.node_creator.create_nodes(tablename, primaryKey[0])
+        
+
+
+if __name__ == "__main__":
+    main()
